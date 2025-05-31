@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Sí/No con Imágenes</title>
+    <link rel="stylesheet" href="./styles/juego.css"/>
+    <link rel="icon" type="image/png" href="./images/creditos1.png">
+</head>
+<body>
+    <main>
+        <div class="tiempo-barra">
+            <div class="tiempo-img-contenedor">
+                <img class="imgtiempo" src="./images/temporizador.png" alt="Temporizador">
+                <span id="tiempo"></span>
+            </div>
+        </div>
+        <div id="contfoto">
+            <div class="texto-sobre-imagen-wrapper">
+                <div id="texto-sobre-imagen" class="texto-sobre-imagen"></div>
+            </div>
+            <img id="imagen" src="" alt="Imagen">
+        </div>
+        <section id="opciones">
+            <button class="opcion-btn" onclick="respuestaUsuario('si')">
+                <img src="./images/btnsi.png" alt="Sí" class="btnsi-img">
+                <span>SI</span>
+            </button>
+            <button class="opcion-btn" onclick="respuestaUsuario('no')">
+                <img src="./images/btnno.png" alt="No" class="btnno-img">
+                <span>NO</span>
+            </button>
+        </section>
+    </main>
+    <script src="./script/script.js"></script>
+</body>
+</html>

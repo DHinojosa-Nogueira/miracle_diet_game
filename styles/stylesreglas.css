@@ -1,0 +1,209 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: rgb(255, 102, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.imgreglas-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+.main-reglas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3vh 2vw 2vh 2vw;
+}
+.texto-sobre-imagen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10% 0;
+}
+
+.texto-arriba {
+    color: rgb(255, 102, 0);
+    font-size: 2.2em;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #000, 0 0 10px #fff2;
+    letter-spacing: 2px;
+}
+
+.texto-abajo {
+    color: rgb(255, 102, 0);
+    font-size: 2.2em;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #000, 0 0 10px #fff2;
+    letter-spacing: 2px;
+    margin-top: 6em; 
+}
+.imgreglas {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.explicacion p {
+    background-color: black;
+    color: rgb(255, 102, 0);
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2vh 0;
+}
+
+.botones-si-no {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6vw;
+    margin: 3vh 0 2vh 0;
+    width: 100%;
+    max-width: 400px;             
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btnsi, .btnno {
+    height: 15vh;    
+    width: auto;
+    margin-bottom: 1vh;
+}
+
+.opcion {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txtsi, .txtno {
+    color: rgb(255, 102, 0);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.confirmar {
+    margin: 3vh 0 2vh 0;
+    text-align: center;
+}
+
+.txtconfirmar1 {
+    background-color: black;
+    color: rgb(255, 102, 0);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 1vh 0;
+}
+
+.txtconfirmar2 {
+    background-color: black;
+    color: rgb(255, 102, 0);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0;
+}
+
+.acciones-reglas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+    margin-top: 3vh;
+}
+
+.aceptar {
+    height: 24vh;
+    width: auto;
+    max-width: 90vw;
+    margin-bottom: 2vh;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aceptar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacio entre el texto y la imagen */
+}
+
+.texto-acepta {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(255, 102, 0);
+    text-shadow: 2px 2px 8px #000, 0 0 10px #fff2;
+    text-align: center;
+}
+
+.volver {
+    height: 10vh;
+    width: auto;
+    max-width: 60vw;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive para tablets/iPad */
+@media (min-width: 701px) and (max-width: 1024px) {
+    .aceptar {
+        height: 14vh;
+    }
+    .volver {
+        height: 8vh;
+    }
+    .imgreglas {
+        max-width: 400px;
+    }
+    .texto-arriba,
+    .texto-abajo {
+        font-size: 1.7em;
+    }
+    .texto-abajo {
+        margin-top: 3em;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-reglas {
+        padding: 2vh 1vw 1vh 1vw;
+    }
+    .aceptar {
+        height: 10vh;
+    }
+    .volver {
+        height: 6vh;
+    }
+    .imgreglas {
+        max-width: 95vw;
+    }
+    .texto-arriba,
+    .texto-abajo {
+        font-size: 1.6em; /* Más grande en móviles */
+    }
+    .texto-abajo {
+        margin-top: 2em;
+    }
+}

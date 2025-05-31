@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="./styles/formulario.css">
+    <link rel="icon" type="image/png" href="./images/creditos1.png">
+</head>
+<body>
+    <div class="form-container">
+        <form id="registroForm" onsubmit="enviarGoogleForm(event)">
+            <div class="form-row">
+                <img src="./images/edad.png" class="icono-form" alt="Edad">
+                <div class="edad-container">
+                    <label for="edad">EDAD:</label>
+                    <input type="number" id="edad" name="edad" min="1" max="100" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <img src="./images/sexo.png" class="icono-form" alt="Sexo">
+                <div class="sexo-container">
+                    <label><input type="radio" class="radiomujer" name="sexo" value="Mujer" required> MUJER</label>
+                    <label><input type="radio" class="radiohombre" name="sexo" value="Hombre"> HOMBRE</label>
+                    <label><input type="radio" class="radiocontestar" name="sexo" value="Otras identidades"> OTRAS IDENTIDADES</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <img src="./images/altura.jpg" class="icono-form" alt="Altura">
+                <div class="altura-container">
+                    <label for="altura">ALTURA (CM):</label>
+                    <input type="number" id="altura" name="altura" min="50" max="250" step="0.1" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <img src="./images/peso.png" class="icono-form" alt="Peso">
+                <div class="peso-container">
+                    <label for="peso">PESO (KG):</label>
+                    <input type="number" id="peso" name="peso" min="20" max="300" step="0.1" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <img src="./images/estudio.png" class="icono-form" alt="Ocupación">
+                <div class="ocupacion-container">
+                    <label><input type="radio" class="radioestudia" name="ocupacion" value="Estudias" required> ESTUDIAS</label>
+                    <label><input type="radio" class="radiotrabaja" name="ocupacion" value="Trabajas"> TRABAJAS</label>
+                    <label><input type="radio" class="radiootros" name="ocupacion" value="Otros menesteres"> OTROS MENESTERES</label>
+                </div>
+            </div>
+            <p class="aviso-datos">
+                * Debes ingresar todos los datos para poder continuar.
+            </p>
+            <div class="juego">
+                <div class="formulariodiv">
+                    <a href="reglas.html">
+                        <img class="volver" src="./images/volver.jpg" alt="Volver">
+                    </a>
+                </div>
+                <button id="comenzarBtn" type="submit" style="background: none; border: none; padding: 0; position: relative;">
+                    <div class="comenzar-container">
+                        <img src="./images/comenzar.png" class="comenzar" alt="Comenzar">
+                        <span class="texto-comenzar">¿COMENZAMOS?</span>
+                    </div>
+                </button>
+            </div>
+        </form>
+    </div>
+    <script>
+const GOOGLE_FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSf1ljfbgAeKRc6Be7dH8QI4EpwPdStVGri_67ksa9EH5fjOPQ/formResponse";
+const ENTRY_IDS = {
+  edad: "entry.55287229",
+  sexo: "entry.559264993",
+  altura: "entry.965160659",
+  peso: "entry.264947172",
+  ocupacion: "entry.2020182973"
+};
+
+function enviarGoogleForm(e) {
+  e.preventDefault();
+
+  // Guarda los datos del formulario en localStorage
+  localStorage.setItem("formData", JSON.stringify({
+    edad: document.getElementById("edad").value,
+    sexo: document.querySelector("input[name='sexo']:checked")?.value || "",
+    altura: document.getElementById("altura").value,
+    peso: document.getElementById("peso").value,
+    ocupacion: document.querySelector("input[name='ocupacion']:checked")?.value || ""
+  }));
+
+  // Redirige al juego
+  window.location.href = "juego.html";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.bomba {
+    display: block;
+    width: 38vw;
+    max-width: 420px;
+    min-width: 120px;
+    height: auto;
+    margin: 6vh auto 3vh auto;
+}
+
+.perderdiv {
+    height: auto;
+    width: 20vw; /* Reduce el ancho del contenedor */
+    max-width: 180px; /* Limita el tamaño máximo */
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    justify-content: center;
+    align-items: center;
+    gap: 1vh; /* Espacio entre la imagen y el texto */
+}
+
+.reintentar {
+    display: block;
+    width: 14vw; /* Reduce el ancho de la imagen */
+    max-width: 120px;
+    min-width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+
+.mensaje-tiempo {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(243, 78, 2);
+    text-shadow: 2px 2px 8px #000, 0 0 10px #fff2;
+    margin-top: -6vh; /* Subir más arriba */
+    width: 100%;
+}
+
+.mensaje-reintentar {
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: rgb(243, 78, 2);
+    text-shadow: 2px 2px 8px #000, 0 0 10px #fff2;
+    margin-top: 1vh; /* Espaciado debajo del enlace */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .bomba {
+        width: 60vw;
+        max-width: 95vw;
+    }
+    .reintentar {
+        width: 24vw;
+        max-width: 100px;
+    }
+    .perderdiv {
+        width: 25vw;
+        max-width: 150px;
+    }
+    .mensaje-tiempo {
+        font-size: 2.2em;
+        margin-top: -5vh;
+    }
+    .mensaje-reintentar {
+        font-size: 2em;
+    }
+}
+
+/* Móviles */
+@media (max-width: 700px) {
+    .bomba {
+        width: 65vw;
+        max-width: 80vw;
+        min-width: 60px;
+    }
+    .reintentar {
+        width: 20vw;
+        max-width: 80px;
+        min-width: 40px;
+    }
+    .perderdiv {
+        width: 30vw;
+        max-width: 100px;
+    }
+    .mensaje-tiempo {
+        font-size: 2em;
+        margin-top: -4vh;
+    }
+    .mensaje-reintentar {
+        font-size: 1.8em;
+    }
+}

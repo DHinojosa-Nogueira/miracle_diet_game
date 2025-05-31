@@ -1,0 +1,138 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: rgb(255, 136, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-creditos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3vh 2vw 2vh 2vw;
+}
+
+.imgcreditos1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    max-width: 220px;
+    width: 30vw;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 136, 0);
+    text-decoration: underline;
+    font-size: 2.2rem;
+    margin: 2vh 0 2vh 0;
+}
+
+p, .texto2, .investigador, .investigador2, .investigadores, .investigadores2,
+.investigadores3, .investigadores4, .investigadores5, .tutora, .tutora2,
+.alumno, .alumno2 {
+    position: static;
+    font-size: 1.2rem;
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+    margin: 1vh 0 0 0;
+    text-align: center;
+}
+
+.texto2, .investigador, .investigadores, .tutora, .alumno {
+    text-decoration: underline;
+}
+
+
+.creditosdiv {
+    margin-top: 3vh;
+    text-align: center;
+}
+
+.volver {
+    height: 7vh;
+    width: auto;
+    margin-top: 1vh;
+    cursor: pointer;
+}
+.imagenes-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    margin-top: 2vh;
+}
+
+.ibima, .ies, .volver {
+    height: 7vh;
+    width: auto;
+    margin: 0;
+}
+/* Responsive para móviles */
+@media (max-width: 700px) {
+    .main-creditos {
+        padding: 2vw 2vw 2vw 2vw;
+    }
+    .imgcreditos1 {
+        max-width: 70vw;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    h1 {
+        font-size: 1.2rem;
+        margin: 2vw 0 2vw 0;
+    }
+    p, .texto2, .investigador, .investigador2, .investigadores, .investigadores2,
+    .investigadores3, .investigadores4, .investigadores5, .tutora, .tutora2,
+    .alumno, .alumno2 {
+        font-size: 3.8vw;
+        margin: 2vw 0 0 0;
+    }
+    .ibima, .ies {
+        height: 5vh;
+        margin: 2vw 2vw 0 2vw;
+    }
+    .volver {
+        height: 6vh;
+        margin-top: 2vw;
+    }
+}
+/* Responsive para tablets/iPad */
+@media (min-width: 701px) and (max-width: 1024px) {
+    .main-creditos {
+        padding: 3vw 6vw 3vw 6vw;
+        max-width: 98vw;
+    }
+    .imgcreditos1 {
+        max-width: 40vw;
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+    h1 {
+        font-size: 1.7rem;
+        margin: 2vw 0 2vw 0;
+    }
+    p, .texto2, .investigador, .investigador2, .investigadores, .investigadores2,
+    .investigadores3, .investigadores4, .investigadores5, .tutora, .tutora2,
+    .alumno, .alumno2 {
+        font-size: 1.1rem;
+        margin: 1.5vw 0 0 0;
+    }
+    .ibima, .ies, .volver {
+        height: 6vh;
+        margin: 2vw 2vw 0 2vw;
+    }
+}

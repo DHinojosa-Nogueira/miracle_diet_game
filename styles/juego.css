@@ -1,0 +1,258 @@
+body {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background-color: black;
+    color: rgb(255, 102, 0);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 7vh 0 0 0;
+}
+
+
+#contfoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12vh; 
+    margin-bottom: 5vh;
+    width: 100%;
+    position: relative; 
+}
+
+.texto-sobre-imagen-wrapper {
+    position: absolute;
+    top: -14vh;
+    left: 50%; /* Mueve el div al centro */
+    transform: translateX(-50%); /* Ajusta para centrarlo completamente */
+    width: 38%; /* Reduce el ancho aún más */
+    height: auto; /* Ajusta la altura automáticamente según el contenido */
+    pointer-events: none;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    border: 4px solid rgb(243, 78, 2);
+    border-radius: 10px;
+    padding: 5px; /* Reduce el espacio interno */
+}
+
+.texto-sobre-imagen {
+    color: rgb(243, 78, 2);
+    font-size: 2em;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #000, 0 0 10px #fff2;
+    text-align: center;
+    width: 90%;
+    background: none;
+    pointer-events: none;
+    margin-top: 0.5em;
+}
+
+
+.imgtiempo {
+    display: block;
+    width: 18vw;
+    max-width: 180px;
+    min-width: 80px;
+    height: auto;
+}
+
+#imagen {
+    width: 23vw;
+    max-width: 260px;
+    min-width: 120px;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #222;
+    background: #111;
+    position: relative; /* Asegura que la imagen esté debajo del texto */
+    z-index: 1;
+}
+
+
+.tiempo-barra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 4vh;
+    width: 100%;
+}
+
+.tiempo-img-contenedor {
+    position: relative;
+    display: inline-block;
+}
+
+#tiempo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: rgb(255, 102, 0);
+    padding: 8px 18px;
+    border-radius: 10px;
+    pointer-events: none;
+    min-width: 60px;
+    text-align: center;
+    background: none;
+}
+
+#opciones {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 7vw;
+    margin: 5vh 0 2vh 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.opcion-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.1s;
+}
+
+.opcion-btn:active {
+    transform: scale(0.95);
+}
+
+.btnsi-img, .btnno-img {
+    height: 12vh;
+    max-height: 110px;
+    min-height: 60px;
+    width: auto;
+    margin-bottom: 0.5vh;
+}
+
+#opciones span {
+    color: rgb(255, 102, 0);
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Tablets (iPad) */
+@media (max-width: 1024px) {
+    main {
+        padding: 5vh 0 0 0;
+    }
+    .imgtiempo {
+        width: 38vw;
+        max-width: 220px;
+    }
+    #tiempo {
+        font-size: 1.7rem;
+        padding: 10px 18px;
+        min-width: 50px;
+    }
+    #imagen {
+        width: 48vw;
+        max-width: 320px;
+    }
+    .btnsi-img, .btnno-img {
+        height: 15vh;
+        max-height: 140px;
+        min-height: 60px;
+    }
+    #opciones span {
+        font-size: 2.2rem;
+    }
+    #contfoto {
+        margin-top: 6vh;
+        margin-bottom: 4vh;
+    }
+    #opciones {
+        margin: 4vh 0 2vh 0;
+    }
+    .texto-sobre-imagen-wrapper {
+        width: 60%; /* Más ancho en tablets */
+        padding: 8px;
+        top: -6vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .texto-sobre-imagen {
+        font-size: 1.2em;
+    }
+}
+
+/* Móviles */
+@media (max-width: 700px) {
+    main {
+        padding: 3vh 0 0 0;
+    }
+    .tiempo-barra {
+        flex-direction: column;
+        gap: 1vh;
+        margin-bottom: 2vh;
+    }
+    .imgtiempo {
+        width: 40vw;
+        max-width: 80px;
+    }
+    #tiempo {
+        font-size: 1.1rem;
+        padding: 4px 8px;
+        min-width: 28px;
+    }
+    #imagen {
+        width: 70vw;
+        max-width: 90vw;
+        min-width: 80px;
+    }
+    #contfoto {
+        margin-top: 4vh;
+        margin-bottom: 3vh;
+    }
+    #opciones {
+        flex-direction: column;
+        gap: 3vh;
+        max-width: 90vw;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3vh;
+    }
+    .btnsi-img, .btnno-img {
+        height: 9vh;
+        max-height: 70px;
+        min-height: 30px;
+    }
+    #opciones span {
+        font-size: 1.3rem;
+    }
+    .texto-sobre-imagen-wrapper {
+        width: 80%; /* Más ancho en móviles */
+        padding: 6px;
+        top: -6vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .texto-sobre-imagen {
+        font-size: 1em;
+    }
+}

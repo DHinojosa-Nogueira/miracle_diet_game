@@ -1,0 +1,170 @@
+/* Estilos generales */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Texto superior e inferior */
+.texto-superior {
+    text-align: center;
+    color: rgb(243, 78, 2);
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.texto-inferior {
+    text-align: center;
+    color: rgb(243, 78, 2);
+    font-size: 2.5em;
+    margin-top: 0.5em;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Imagen de inicio */
+.imginicio {
+    max-width: 40vw;
+    height: auto;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+    display: block;
+}
+
+/* Menú principal */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    margin-top: 4vh;
+}
+
+.creditos, .jugar, .estadisticas {
+    position: static;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imágenes del menú */
+.imgcreditos {
+    width: 20vw;         /* Más grande solo créditos */
+    max-width: 110px;
+    min-width: 70px;
+    height: auto;
+    margin-top: -2vh;
+}
+.imgjugar, .imgestadisticas {
+    width: 12vw;
+    max-width: 80px;
+    min-width: 48px;
+    height: auto;
+    margin-top: -2vh;
+}
+
+/* Texto debajo de las imágenes */
+.menu-texto {
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgb(243, 78, 2);
+    font-size: 1.1em;
+    margin-top: 0.7em;
+    font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* Responsive para tablets */
+@media (max-width: 1024px) and (min-width: 601px) {
+    .main-container {
+        min-height: 90vh;
+    }
+    .texto-superior,
+    .texto-inferior {
+        font-size: 2em;
+    }
+    .imginicio {
+        max-width: 60vw;
+        min-width: 180px;
+        margin-top: 1vh;
+        margin-bottom: 2vh;
+    }
+    .menu {
+        gap: 6vw;
+        margin-top: 2vh;
+    }
+    .imgcreditos {
+        width: 24vw;
+        max-width: 100px;
+        min-width: 60px;
+        margin-top: 0vh;
+    }
+    .imgjugar, .imgestadisticas {
+        width: 16vw;
+        max-width: 70px;
+        min-width: 40px;
+        margin-top: 0vh;
+    }
+    .menu-texto {
+        font-size: 1em;
+        margin-top: 0.6em;
+    }
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+    .main-container {
+        min-height: 80vh;
+    }
+    .texto-superior,
+    .texto-inferior {
+        font-size: 1.3em;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+        margin-top: 1vh;
+    }
+    .imginicio {
+        max-width: 80vw;   
+        min-width: 120px;
+        margin-top: 0.5vh;
+        margin-bottom: 1.5vh;
+    }
+    .imgcreditos {
+        width: 28vw;
+        max-width: 90px;
+        min-width: 40px;
+        margin-top: 0vh;
+    }
+    .imgjugar, .imgestadisticas {
+        width: 24vw;
+        max-width: 75px;
+        min-width: 36px;
+        margin-top: 0vh;
+    }
+    .menu-texto {
+        font-size: 1em;
+        margin-top: 0.5em;
+    }
+}

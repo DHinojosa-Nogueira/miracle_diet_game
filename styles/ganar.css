@@ -1,0 +1,123 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.ganar { 
+    display: block; 
+    width: 50vw; 
+    max-width: 500px; 
+    min-width: 180px; 
+    height: auto;
+    margin-top: 30vh;
+ }
+
+.ganardiv {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mensaje-final {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(243, 78, 2);
+    text-shadow: 2px 2px 8px #000, 0 0 10px #fff2;
+    margin: 20px auto;
+}
+
+.salir {
+    display: block;
+    width: 18vw;
+    max-width: 180px;
+    min-width: 80px;
+    height: auto;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .ganar {
+        width: 65vw;         
+        max-width: 75vw;     
+        min-width: 120px;
+    }
+    
+    .mensaje-final {
+        font-size: 1.8em; /* Ajuste de tamaño para tablets */
+    }
+}
+
+/* Móviles */
+@media (max-width: 700px) {
+    .ganar {
+        width: 85vw;        
+        max-width: 95vw;     
+        min-width: 80px;     
+    }
+
+    .mensaje-final {
+        font-size: 1.5em; /* Ajuste de tamaño para móviles */
+    }
+}
+/* Portátiles */
+@media (min-width: 1025px) and (max-width: 1366px) {
+    body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-x: hidden;
+    }
+
+    /* Portátiles */
+@media (min-width: 1025px) and (max-width: 1366px) {
+   .ganar {
+    width: 40vw;
+    max-width: 380px;
+    min-width: 150px;
+    margin-top: 20vh; /* Aumenta más el margen superior */
+    margin-bottom: 2vh;
+    display: block;
+    position: relative;
+}
+
+}
+    .ganardiv {
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mensaje-final {
+        margin-top: 12vh; /* Aumenta el margen superior */
+    }
+
+    .salir {
+        display: block;
+        width: 16vw;
+        max-width: 160px;
+        min-width: 90px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+}
+

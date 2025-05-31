@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+#resultadoCanvas {
+    display: block;
+    position: relative;
+    width: 40vw;         
+    max-width: 600px;   
+    min-width: 100px;
+    height: auto;
+    background: transparent;
+    margin-top: 5vh;
+    box-sizing: border-box;
+    border-radius: 18px;
+}
+.texto-encima-canvas {
+    position: absolute;
+    top: 5vh; /* Ajusta según necesites */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5em;
+    font-weight: bold;
+    color: rgb(243, 78, 2);
+    text-shadow: 2px 2px 8px #000, 0 0 10px #fff2;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    #resultadoCanvas {
+        width: 65vw; /* Más pequeño */
+        max-width: 80vw;
+        min-width: 80px;
+    }
+    
+    .texto-encima-canvas {
+        font-size: 2.5em; /* Texto más grande en tablets */
+    }
+}
+
+/* Móviles */
+@media (max-width: 700px) {
+    #resultadoCanvas {
+        width: 80vw;         /* Más pequeño */
+        max-width: 95vw;
+        min-width: 40px;
+    }
+}
